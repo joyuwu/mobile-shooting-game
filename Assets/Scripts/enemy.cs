@@ -22,7 +22,8 @@ public class enemy : MonoBehaviour
     {
         if (other.tag == "Bullet") 
         {
-            hp -= 20;
+            Bullet bullet = other.GetComponent<Bullet>();
+            hp -= bullet.atk;
 
             if (hp <= 0)
             {
